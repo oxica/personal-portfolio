@@ -313,11 +313,6 @@ color: var(--white-color);
     font-size: .8rem;
 }
 
-/* .services-content i{
-    font-size: 1.5rem;
-    color: var(--main-color);
-} */
-
 .services-content h3{
     font-size: 1.1rem;
      margin-bottom: .6rem;
@@ -332,8 +327,8 @@ color: var(--white-color);
 }
 
 .services-content .btn{
-width: 8rem;
-height: 2.5rem;
+    width: 8rem;
+    height: 2.5rem;
 }
 
 .skills-box{
@@ -345,50 +340,34 @@ height: 2.5rem;
 .skills-box .skills-content{
     display: flex;
     flex: 1 1 20rem;
-    /* text-align: center; */
 }
 
 .skills-content h3{
     font-size: 1.3rem;
     line-height: 1;
     margin-bottom: .6rem;
+    text-align: center;
+    color: var(--main-color);
 }
-
-/* .skills-content .content{
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 0.8rem;
-}
-
-.skills-content .content span{
-display: inline-flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-width: auto;
-padding: 1rem;
-height: 3.5rem;
-border: var(--border);
-
-text-align: center;
-border-radius: .5rem;
-font-weight: 600;
-} */
 
 .content{
     display: inline-flex;
     flex-direction: column;
-    gap: 0.3rem;
+    gap:.3rem;   
+    padding: .7rem;
+    background: #d0e5ed;
+    box-shadow: var(--box-shadow);
+}
+
+.techskills-content .content{
+    margin-right: 1rem;
 }
 
 .softskills-content .content{
     margin-bottom: 2.5rem;
-  
 }
 
-.skills-content .content i{
-margin-right: 1rem;
-color: var(--main-color);
-
+.skills-content .content span i{
+    margin-right: 1rem;
+    color: var(--main-color);
 }
