@@ -353,8 +353,8 @@ color: var(--white-color);
 .content{
     display: inline-flex;
     flex-direction: column;
-    gap:.3rem;   
-    padding: .7rem;
+    gap:.2rem;   
+    padding: .6rem;
     background: #d0e5ed;
     box-shadow: var(--box-shadow);
 }
@@ -364,7 +364,7 @@ color: var(--white-color);
 }
 
 .softskills-content .content{
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .skills-content .content span i{
