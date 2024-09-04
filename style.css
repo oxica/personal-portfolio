@@ -363,11 +363,75 @@ color: var(--white-color);
     margin-right: 1rem;
 }
 
-.softskills-content .content{
+.softskills-content .content:nth-of-type(1){
     margin-bottom: 2rem;
 }
+
+/* .softskills-content .content{
+    margin-bottom: 2rem;
+} */
 
 .skills-content .content span i{
     margin-right: 1rem;
     color: var(--main-color);
 }
+
+.portfolio-box .img-box{
+    display: flex;
+    width: 100%;
+    height: 15rem;
+    border: var(--border);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.portfolio-box .img-box img{
+    width: 100%;
+    object-fit: cover;
+    transition: .5s ease;
+}
+
+.portfolio-box .img-box img:hover{
+    transform: scale(1.1);
+}
+
+.portfolio-box .info-box{
+    margin: 1rem 0 1.5rem;
+}
+
+.portfolio-box .info-box .info-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.portfolio-box .info-box .info-title h3{
+    font-size: 1.3rem;
+}
+
+.portfolio-box .info-box .info-title a{
+    display: flex;
+    align-items: center;
+    color: var(--main-color);
+}
+
+.portfolio-box .info-box .info-title a i{
+    margin-left: .3rem;
+}
+
+.portfolio-box .info-box p:nth-of-type(1){
+    font-weight: 600;
+}
+
+.portfolio-box .btn-box{
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-box .btn-box .btn{
+    margin: 0 1.15rem;
+}
+
+
+
