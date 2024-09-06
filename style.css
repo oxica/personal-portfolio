@@ -18,7 +18,7 @@
   --text-color: #333;
   --second-text-color: #555;
   --white-color: #fff;
-  --cover-color: linear-gradient(45deg, #2fe690df, #1759b0);
+  --cover-color: linear-gradient(45deg, #38e694, #1759b0);
   --pages-color: linear-gradient(90deg, #fff, #ddd);
   --border: 0.125rem solid #0074f0;
   --box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
@@ -32,6 +32,7 @@ body {
 
   background: var(--bg-color);
   color: var(--text-color);
+  overflow: hidden;
 }
 
 .wrapper {
@@ -39,6 +40,21 @@ body {
   width: 66rem;
   height: 45rem;
   padding: 2rem;
+  perspective: 250rem;
+  animation: show-animate 2s forwards;
+}
+
+@keyframes show-animate {
+  0%,
+  30% {
+    opacity: 0;
+    transform: rotate(-20deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
 }
 
 .cover {
@@ -58,6 +74,11 @@ body {
   z-index: -1;
 }
 
+.cover.cover-right {
+  z-index: 100;
+  transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
 .cover.cover-right.turn {
   transform: rotateY(180deg);
 }
@@ -67,6 +88,7 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
+  perspective: 250rem;
 }
 
 .book .book-page {
@@ -78,6 +100,10 @@ body {
   box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.1);
   display: flex;
   padding: 2rem;
+}
+
+.book-page.page-left {
+  box-shadow: -0.6rem 0.6rem 0.6rem rgba(0, 0, 0, 0.1);
 }
 
 .profile-page {
@@ -157,21 +183,12 @@ body {
   color: var(--white-color);
 }
 
-/* .btn-box .btn:nth-child(2){
-background: transparent;
-color: var(--main-color);
-}
-
-.btn-box .btn:nth-child(2):hover{
-    background: var(--main-color);
-color: var(--white-color);
-} */
-
 .book-page.page-right {
   position: absolute;
   right: 0;
   transform-style: preserve-3d;
   transform-origin: left;
+  transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .book-page.page-right.turn {
@@ -367,10 +384,6 @@ color: var(--white-color);
   margin-bottom: 2rem;
 }
 
-/* .softskills-content .content{
-    margin-bottom: 2rem;
-} */
-
 .skills-content .content span i {
   margin-right: 1rem;
   color: var(--main-color);
@@ -482,20 +495,20 @@ color: var(--white-color);
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%) scale(.5);
+  transform: translateX(-50%) scale(0.5);
   font-size: 1rem;
   color: var(--main-color);
-  opacity: 0; 
+  opacity: 0;
   transition: 0.5s;
 }
 
-.back-profile:hover{
-    background: var(--main-color);
-    color: var(--white-color);
+.back-profile:hover {
+  background: var(--main-color);
+  color: var(--white-color);
 }
 
 .back-profile:hover p {
   opacity: 1;
   transform: translateX(-50%) scale(1);
   top: -1.8rem;
-} 
+}
